@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Du Lịch Gia Lai</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fa;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#1abc9c;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+z-index:1000;
+}
+
+nav h2{
+color:white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HEADER */
+header{
+margin-top:70px;
+height:420px;
+background:url("https://images.unsplash.com/photo-1602143407151-7111542d6d45") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+header h1{
+font-size:50px;
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
+}
+
+/* SLIDER */
+.slider{
+max-width:1100px;
+margin:40px auto;
+overflow:hidden;
+border-radius:10px;
+}
+
+.slides{
+display:flex;
+width:400%;
+animation:slide 16s infinite;
+}
+
+.slides img{
+width:100%;
+height:400px;
+object-fit:cover;
+}
+
+@keyframes slide{
+0%{margin-left:0}
+25%{margin-left:0}
+30%{margin-left:-100%}
+50%{margin-left:-100%}
+55%{margin-left:-200%}
+75%{margin-left:-200%}
+80%{margin-left:-300%}
+100%{margin-left:-300%}
+}
+
+/* CONTAINER */
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* CARD */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:18px;
+}
+
+.card h3{
+color:#1abc9c;
+margin-bottom:10px;
+}
+
+/* MAP */
+.map{
+width:100%;
+height:250px;
+border:none;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:8px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+margin-top:50px;
+background:#1abc9c;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h2>Gia Lai Travel</h2>
+<ul>
+<li><a href="#home">Trang chủ</a></li>
+<li><a href="#places">Địa điểm</a></li>
+<li><a href="#gallery">Thư viện ảnh</a></li>
+</ul>
+</nav>
+
+<!-- HEADER -->
+<header id="home">
+<h1>Khám Phá Du Lịch Gia Lai</h1>
+</header>
+
+<!-- SLIDER -->
+<div class="slider">
+<div class="slides">
+<img src="https://images.unsplash.com/photo-1583241800698-1c8c74a0f2b5">
+<img src="https://images.unsplash.com/photo-1594819047050-99defddfa1d1">
+<img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b">
+<img src="https://images.unsplash.com/photo-1579353977828-2a4eab540b9a">
+</div>
+</div>
+
+<!-- ĐỊA ĐIỂM -->
+<div class="container" id="places">
+<h2>Địa Điểm Nổi Tiếng</h2>
+
+<div class="grid">
+
+<!-- Biển Hồ -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<div class="card-content">
+<h3>Biển Hồ (Hồ T'Nưng)</h3>
+<p>Danh thắng nổi tiếng của Pleiku với cảnh quan thiên nhiên tuyệt đẹp.</p>
+</div>
+<iframe class="map"
+src="https://www.google.com/maps?q=Biển+Hồ+T'Nưng+Gia+Lai&output=embed"></iframe>
+</div>
+
+<!-- Chư Đăng Ya -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371">
+<div class="card-content">
+<h3>Núi Lửa Chư Đăng Ya</h3>
+<p>Ngọn núi lửa đã ngừng hoạt động nổi tiếng tại Gia Lai.</p>
+</div>
+<iframe class="map"
+src="https://www.google.com/maps?q=Chư+Đăng+Ya+Gia+Lai&output=embed"></iframe>
+</div>
+
+<!-- Thác Phú Cường -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<div class="card-content">
+<h3>Thác Phú Cường</h3>
+<p>Thác nước hùng vĩ cao khoảng 45m tại huyện Chư Sê.</p>
+</div>
+<iframe class="map"
+src="https://www.google.com/maps?q=Thác+Phú+Cường+Gia+Lai&output=embed"></iframe>
+</div>
+
+<!-- Chùa Minh Thành -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1548013146-72479768bada">
+<div class="card-content">
+<h3>Chùa Minh Thành</h3>
+<p>Ngôi chùa nổi tiếng với kiến trúc độc đáo tại Pleiku.</p>
+</div>
+<iframe class="map"
+src="https://www.google.com/maps?q=Chùa+Minh+Thành+Pleiku&output=embed"></iframe>
+</div>
+
+</div>
+</div>
+
+<!-- GALLERY -->
+<div class="container" id="gallery">
+<h2>Thư Viện Ảnh</h2>
+
+<div class="gallery">
+<img src="https://picsum.photos/500/400?random=11">
+<img src="https://picsum.photos/500/400?random=12">
+<img src="https://picsum.photos/500/400?random=13">
+<img src="https://picsum.photos/500/400?random=14">
+<img src="https://picsum.photos/500/400?random=15">
+<img src="https://picsum.photos/500/400?random=16">
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+<h3>Du Lịch Gia Lai</h3>
+<p>Khám phá vẻ đẹp thiên nhiên và văn hóa Tây Nguyên</p>
+<p>© 2026 Gia Lai Travel</p>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Du Lịch Gia Lai</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fa;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#1abc9c;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+z-index:1000;
+}
+
+nav h2{
+color:white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HEADER */
+header{
+margin-top:70px;
+height:420px;
+background:url("https://images.unsplash.com/photo-1602143407151-7111542d6d45") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+header h1{
+font-size:50px;
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
+}
+
+/* SLIDER */
+.slider{
+max-width:1100px;
+margin:40px auto;
+overflow:hidden;
+border-radius:10px;
+}
+
+.slides{
+display:flex;
+width:400%;
+animation:slide 16s infinite;
+}
+
+.slides img{
+width:100%;
+height:400px;
+object-fit:cover;
+}
+
+@keyframes slide{
+0%{margin-left:0}
+25%{margin-left:0}
+30%{margin-left:-100%}
+50%{margin-left:-100%}
+55%{margin-left:-200%}
+75%{margin-left:-200%}
+80%{margin-left:-300%}
+100%{margin-left:-300%}
+}
+
+/* CONTAINER */
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* CARD */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:18px;
+}
+
+.card h3{
+color:#1abc9c;
+margin-bottom:10px;
+}
+
+/* MAP */
+.map{
+width:100%;
+height:250px;
+border:none;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:8px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+margin-top:50px;
+background:#1abc9c;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h2>Gia Lai Travel</h2>
+<ul>
+<li><a href="#home">Trang chủ</a></li>
+<li><a href="#places">Địa điểm</a></li>
+<li><a href="#gallery">Thư viện ảnh</a></li>
+</ul>
+</nav>
+
+<!-- HEADER -->
+<header id="home">
+<h1>Khám Phá Du Lịch Gia Lai</h1>
+</header>
+
+<!-- SLIDER -->
+<div class="slider">
+<div class="slides">
+<img src="https://images.unsplash.com/photo-1583241800698-1c8c74a0f2b5">
+<img src="https://images.unsplash.com/photo-1594819047050-99defddfa1d1">
+<img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b">
+<img src="https://images.unsplash.com/photo-1579353977828-2a4eab540b9a">
+</div>
+</div>
+
+<!-- ĐỊA ĐIỂM -->
+<div class="container" id="places">
+<h2>Địa Điểm Nổi Tiếng</h2>
+
+<div class="grid">
+
+<!-- Biển Hồ -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<div class="card-content">
+<h3>Biển Hồ (Hồ T'Nưng)</h3>
+<p>Danh thắng nổi tiếng của Pleiku với cảnh quan thiên nhiên tuyệt đẹp.</p>
+</div>
+<iframe class="map"
+src="https://www.google.com/maps?q=Biển+Hồ+T'Nưng+Gia+Lai&output=embed"></iframe>
+</div>
+
+<!-- Chư Đăng Ya -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371">
+<div class="card-content">
+<h3>Núi Lửa Chư Đăng Ya</h3>
+<p>Ngọn núi lửa đã ngừng hoạt động nổi tiếng tại Gia Lai.</p>
+</div>
+<iframe class="map"
+src="https://www.google.com/maps?q=Chư+Đăng+Ya+Gia+Lai&output=embed"></iframe>
+</div>
+
+<!-- Thác Phú Cường -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<div class="card-content">
+<h3>Thác Phú Cường</h3>
+<p>Thác nước hùng vĩ cao khoảng 45m tại huyện Chư Sê.</p>
+</div>
+<iframe class="map"
+src="https://www.google.com/maps?q=Thác+Phú+Cường+Gia+Lai&output=embed"></iframe>
+</div>
+
+<!-- Chùa Minh Thành -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1548013146-72479768bada">
+<div class="card-content">
+<h3>Chùa Minh Thành</h3>
+<p>Ngôi chùa nổi tiếng với kiến trúc độc đáo tại Pleiku.</p>
+</div>
+<iframe class="map"
+src="https://www.google.com/maps?q=Chùa+Minh+Thành+Pleiku&output=embed"></iframe>
+</div>
+
+</div>
+</div>
+
+<!-- GALLERY -->
+<div class="container" id="gallery">
+<h2>Thư Viện Ảnh</h2>
+
+<div class="gallery">
+<img src="https://picsum.photos/500/400?random=11">
+<img src="https://picsum.photos/500/400?random=12">
+<img src="https://picsum.photos/500/400?random=13">
+<img src="https://picsum.photos/500/400?random=14">
+<img src="https://picsum.photos/500/400?random=15">
+<img src="https://picsum.photos/500/400?random=16">
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+<h3>Du Lịch Gia Lai</h3>
+<p>Khám phá vẻ đẹp thiên nhiên và văn hóa Tây Nguyên</p>
+<p>© 2026 Gia Lai Travel</p>
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Du Lịch Gia Lai</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fa;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#1abc9c;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+z-index:1000;
+}
+
+nav h2{
+color:white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HEADER */
+header{
+margin-top:70px;
+height:420px;
+background:url("https://images.unsplash.com/photo-1602143407151-7111542d6d45") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+header h1{
+font-size:50px;
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
+}
+
+/* SLIDER */
+.slider{
+max-width:1100px;
+margin:40px auto;
+overflow:hidden;
+border-radius:10px;
+}
+
+.slides{
+display:flex;
+width:400%;
+animation:slide 16s infinite;
+}
+
+.slides img{
+width:100%;
+height:400px;
+object-fit:cover;
+}
+
+@keyframes slide{
+0%{margin-left:0}
+25%{margin-left:0}
+30%{margin-left:-100%}
+50%{margin-left:-100%}
+55%{margin-left:-200%}
+75%{margin-left:-200%}
+80%{margin-left:-300%}
+100%{margin-left:-300%}
+}
+
+/* CONTAINER */
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* CARD */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:18px;
+}
+
+.card h3{
+color:#1abc9c;
+margin-bottom:10px;
+}
+
+/* MAP */
+.map{
+width:100%;
+height:250px;
+border:none;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:8px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+margin-top:50px;
+background:#1abc9c;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h2>Gia Lai Travel</h2>
+<ul>
+<li><a href="#home">Trang chủ</a></li>
+<li><a href="#places">Địa điểm</a></li>
+<li><a href="#gallery">Thư viện ảnh</a></li>
+</ul>
+</nav>
+
+<!-- HEADER -->
+<header id="home">
+<h1>Khám Phá Du Lịch Gia Lai</h1>
+</header>
+
+<!-- SLIDER -->
+<div class="slider">
+<div class="slides">
+<img src="https://images.unsplash.com/photo-1583241800698-1c8c74a0f2b5">
+<img src="https://images.unsplash.com/photo-1594819047050-99defddfa1d1">
+<img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b">
+<img src="https://images.unsplash.com/photo-1579353977828-2a4eab540b9a">
+</div>
+</div>
+
+<!-- ĐỊA ĐIỂM -->
+<div class="container" id="places">
+<h2>Địa Điểm Nổi Tiếng</h2>
+
+<div class="grid">
+
+<!-- Biển Hồ -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<div class="card-content">
+<h3>Biển Hồ (Hồ T'Nưng)</h3>
+<p>Danh thắng nổi tiếng của Pleiku với cảnh quan thiên nhiên tuyệt đẹp.</p>
+</div>
+<iframe class="map"
+src="https://www.google.com/maps?q=Biển+Hồ+T'Nưng+Gia+Lai&output=embed"></iframe>
+</div>
+
+<!-- Chư Đăng Ya -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371">
+<div class="card-content">
+<h3>Núi Lửa Chư Đăng Ya</h3>
+<p>Ngọn núi lửa đã ngừng hoạt động nổi tiếng tại Gia Lai.</p>
+</div>
+<iframe class="map"
+src="https://ibb.co/zVMxs48F"></iframe>
+</div>
+
+<!-- Thác Phú Cường -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<div class="card-content">
+<h3>Thác Phú Cường</h3>
+<p>Thác nước hùng vĩ cao khoảng 45m tại huyện Chư Sê.</p>
+</div>
+<iframe class="map"
+src="https://www.google.com/maps?q=Thác+Phú+Cường+Gia+Lai&output=embed"></iframe>
+</div>
+
+<!-- Chùa Minh Thành -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1548013146-72479768bada">
+<div class="card-content">
+<h3>Chùa Minh Thành</h3>
+<p>Ngôi chùa nổi tiếng với kiến trúc độc đáo tại Pleiku.</p>
+</div>
+<iframe class="map"
+src="https://www.google.com/maps?q=Chùa+Minh+Thành+Pleiku&output=embed"></iframe>
+</div>
+
+</div>
+</div>
+
+<!-- GALLERY -->
+<div class="container" id="gallery">
+<h2>Thư Viện Ảnh</h2>
+
+<div class="gallery">
+<img src="https://picsum.photos/500/400?random=11">
+<img src="https://picsum.photos/500/400?random=12">
+<img src="https://picsum.photos/500/400?random=13">
+<img src="https://picsum.photos/500/400?random=14">
+<img src="https://picsum.photos/500/400?random=15">
+<img src="https://picsum.photos/500/400?random=16">
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+<h3>Du Lịch Gia Lai</h3>
+<p>Khám phá vẻ đẹp thiên nhiên và văn hóa Tây Nguyên</p>
+<p>© 2026 Gia Lai Travel</p>
+</footer>
+
+</body>
+</html>
